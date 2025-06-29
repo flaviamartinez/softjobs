@@ -9,5 +9,5 @@ export const registerModel = async ({ email, password, rol, lenguage }) => {
   }
 
   const response = await pool.query(query)
-  return response.rows
+  return response.rows[0]
 }

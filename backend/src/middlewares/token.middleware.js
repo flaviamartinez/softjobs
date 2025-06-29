@@ -12,6 +12,6 @@ export const verifyToken = async (req, res, next) => {
     req.user = decoded.email
     next()
   } catch (error) {
-    return res.status(400).json({ error: 'Error verificando token' })
+    return res.status(500).json({ error: 'Error verificando token' })
   }
 }
